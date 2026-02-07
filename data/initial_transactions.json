@@ -1,0 +1,155 @@
+[
+  {
+    "transaction_id": "TX_INIT_001",
+    "type": "transfer",
+    "from_user": "user_001",
+    "to_user": "user_002",
+    "amount": 5000,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-04T10:30:00",
+    "description": "Transfert P2P",
+    "metadata": {
+      "channel": "mobile_app",
+      "location": "Dakar"
+    }
+  },
+  {
+    "transaction_id": "TX_INIT_002",
+    "type": "payment",
+    "from_user": "user_003",
+    "to_user": "SENELEC",
+    "amount": 8450,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-04T14:15:00",
+    "description": "Paiement facture électricité",
+    "metadata": {
+      "provider": "SENELEC",
+      "bill_reference": "ELEC-2026-001234",
+      "channel": "mobile_app"
+    }
+  },
+  {
+    "transaction_id": "TX_INIT_003",
+    "type": "transfer",
+    "from_user": "user_004",
+    "to_user": "user_005",
+    "amount": 2000,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-04T16:45:00",
+    "description": "Transfert P2P",
+    "metadata": {
+      "channel": "mobile_app",
+      "note": "Remboursement déjeuner"
+    }
+  },
+  {
+    "transaction_id": "TX_INIT_004",
+    "type": "payment",
+    "from_user": "user_006",
+    "to_user": "Orange",
+    "amount": 1000,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-05T09:00:00",
+    "description": "Recharge crédit téléphone",
+    "metadata": {
+      "provider": "Orange",
+      "phone_number": "77 678 90 12",
+      "channel": "mobile_app"
+    }
+  },
+  {
+    "transaction_id": "TX_INIT_005",
+    "type": "transfer",
+    "from_user": "user_007",
+    "to_user": "user_008",
+    "amount": 10000,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-05T11:20:00",
+    "description": "Transfert P2P",
+    "metadata": {
+      "channel": "mobile_app",
+      "note": "Cadeau anniversaire"
+    }
+  },
+  {
+    "transaction_id": "TX_INIT_006",
+    "type": "payment",
+    "from_user": "user_001",
+    "to_user": "SENEAU",
+    "amount": 3200,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-05T13:45:00",
+    "description": "Paiement facture eau",
+    "metadata": {
+      "provider": "SENEAU",
+      "bill_reference": "EAU-2026-005678",
+      "channel": "mobile_app"
+    }
+  },
+  {
+    "transaction_id": "TX_INIT_007",
+    "type": "transfer",
+    "from_user": "user_009",
+    "to_user": "user_010",
+    "amount": 7500,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-05T15:10:00",
+    "description": "Transfert P2P",
+    "metadata": {
+      "channel": "mobile_app",
+      "note": "Contribution tontine"
+    }
+  },
+  {
+    "transaction_id": "TX_INIT_008",
+    "type": "payment",
+    "from_user": "user_002",
+    "to_user": "Expresso",
+    "amount": 2500,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-05T17:30:00",
+    "description": "Recharge internet",
+    "metadata": {
+      "provider": "Expresso",
+      "package": "5GB mensuel",
+      "channel": "mobile_app"
+    }
+  },
+  {
+    "transaction_id": "TX_INIT_009",
+    "type": "transfer",
+    "from_user": "user_005",
+    "to_user": "user_001",
+    "amount": 15000,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-05T18:20:00",
+    "description": "Transfert P2P",
+    "metadata": {
+      "channel": "mobile_app",
+      "note": "Paiement marchandise"
+    }
+  },
+  {
+    "transaction_id": "TX_INIT_010",
+    "type": "transfer",
+    "from_user": "user_003",
+    "to_user": "user_007",
+    "amount": 4000,
+    "currency": "XOF",
+    "status": "committed",
+    "timestamp": "2026-02-05T19:45:00",
+    "description": "Transfert P2P",
+    "metadata": {
+      "channel": "mobile_app"
+    }
+  }
+]

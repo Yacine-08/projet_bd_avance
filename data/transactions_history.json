@@ -1,0 +1,47 @@
+[
+  {
+    "transaction_id": "TX_INIT_001",
+    "type": "transfer",
+    "from_user": "user_001",
+    "to_user": "user_002",
+    "amount": 5000,
+    "status": "committed",
+    "timestamp": "2026-02-04T10:30:00"
+  },
+  {
+    "transaction_id": "TX_INIT_002",
+    "type": "payment",
+    "from_user": "user_003",
+    "to_user": "SENELEC",
+    "amount": 8450,
+    "status": "committed",
+    "timestamp": "2026-02-04T14:15:00"
+  },
+  {
+    "transaction_id": "TX_INIT_003",
+    "type": "transfer",
+    "from_user": "user_004",
+    "to_user": "user_005",
+    "amount": 2000,
+    "status": "committed",
+    "timestamp": "2026-02-04T16:45:00"
+  },
+  {
+    "transaction_id": "TX_INIT_004",
+    "type": "payment",
+    "from_user": "user_006",
+    "to_user": "Orange",
+    "amount": 1000,
+    "status": "committed",
+    "timestamp": "2026-02-05T09:00:00"
+  },
+  {
+    "transaction_id": "TX_INIT_005",
+    "type": "transfer",
+    "from_user": "user_007",
+    "to_user": "user_008",
+    "amount": 10000,
+    "status": "committed",
+    "timestamp": "2026-02-05T11:20:00"
+  }
+]

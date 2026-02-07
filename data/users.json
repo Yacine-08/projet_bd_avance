@@ -1,0 +1,102 @@
+[
+  {
+    "user_id": "user_001",
+    "phone": "77 123 45 67",
+    "name": "Aminata Diallo",
+    "balance": 25430,
+    "currency": "XOF",
+    "created_at": "2025-01-15T10:30:00",
+    "is_active": true,
+    "location": "Dakar"
+  },
+  {
+    "user_id": "user_002",
+    "phone": "77 234 56 78",
+    "name": "Moussa Sow",
+    "balance": 15000,
+    "currency": "XOF",
+    "created_at": "2025-01-18T14:20:00",
+    "is_active": true,
+    "location": "Saint-Louis"
+  },
+  {
+    "user_id": "user_003",
+    "phone": "77 345 67 89",
+    "name": "Fatou Sarr",
+    "balance": 45230,
+    "currency": "XOF",
+    "created_at": "2025-01-10T09:15:00",
+    "is_active": true,
+    "location": "Ziguinchor"
+  },
+  {
+    "user_id": "user_004",
+    "phone": "77 456 78 90",
+    "name": "Mamadou Fall",
+    "balance": 8000,
+    "currency": "XOF",
+    "created_at": "2025-01-22T16:45:00",
+    "is_active": true,
+    "location": "Dakar"
+  },
+  {
+    "user_id": "user_005",
+    "phone": "77 567 89 01",
+    "name": "Aïssatou Ndiaye",
+    "balance": 32100,
+    "currency": "XOF",
+    "created_at": "2025-01-05T11:30:00",
+    "is_active": true,
+    "location": "Thiès"
+  },
+  {
+    "user_id": "user_006",
+    "phone": "77 678 90 12",
+    "name": "Ibrahima Gueye",
+    "balance": 12500,
+    "currency": "XOF",
+    "created_at": "2025-01-28T08:00:00",
+    "is_active": true,
+    "location": "Saint-Louis"
+  },
+  {
+    "user_id": "user_007",
+    "phone": "77 789 01 23",
+    "name": "Marième Mbaye",
+    "balance": 50000,
+    "currency": "XOF",
+    "created_at": "2025-01-03T13:20:00",
+    "is_active": true,
+    "location": "Dakar"
+  },
+  {
+    "user_id": "user_008",
+    "phone": "77 890 12 34",
+    "name": "Cheikh Diop",
+    "balance": 6700,
+    "currency": "XOF",
+    "created_at": "2025-01-20T15:10:00",
+    "is_active": true,
+    "location": "Ziguinchor"
+  },
+  {
+    "user_id": "user_009",
+    "phone": "77 901 23 45",
+    "name": "Khadija Sy",
+    "balance": 28900,
+    "currency": "XOF",
+    "created_at": "2025-01-12T10:50:00",
+    "is_active": true,
+    "location": "Dakar"
+  },
+  {
+    "user_id": "user_010",
+    "phone": "77 012 34 56",
+    "name": "Omar Ba",
+    "balance": 19400,
+    "currency": "XOF",
+    "created_at": "2025-01-25T12:30:00",
+    "is_active": true,
+    "location": "Saint-Louis"
+  }
+]

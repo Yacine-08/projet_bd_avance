@@ -1,0 +1,7 @@
+# Build tools
+setuptools>=65.0.0
+wheel>=0.37.0
+
+# Dépendances principales
+matplotlib>=3.7.0,<3.9.0
+numpy>=1.24.0,<2.0.0
