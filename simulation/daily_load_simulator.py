@@ -1,6 +1,3 @@
-"""
-Simulateur de charge journalière
-"""
 
 import time
 from typing import Dict, List
@@ -8,7 +5,7 @@ from datetime import datetime
 from config.network_config import LoadProfile
 
 class DailyLoadSimulator:
-    """Simule la charge sur 24h avec variations horaires"""
+    # Simule la charge sur 24h avec variations horaires
     
     def __init__(self):
         self.current_hour = 0

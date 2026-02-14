@@ -1,7 +1,3 @@
-"""
-Collecteur de métriques
-"""
-
 from typing import Dict, List
 
 class MetricsCollector:
@@ -17,23 +13,22 @@ class MetricsCollector:
         }
     
     def record_transfer(self, result: Dict, phase: str):
-        """Enregistrer résultat de transfert"""
+        # Enregistrer résultat de transfert
         self.metrics['transfer'][self._normalize_phase(phase)].append(result)
     
     def record_balance_query(self, result: Dict, phase: str):
-        """Enregistrer consultation solde"""
+        # Enregistrer consultation solde
         self.metrics['balance'][self._normalize_phase(phase)].append(result)
     
     def record_history_query(self, result: Dict, phase: str):
-        """Enregistrer consultation historique"""
+        # Enregistrer consultation historique
         self.metrics['history'][self._normalize_phase(phase)].append(result)
     
     def record_payment(self, result: Dict, phase: str):
-        """Enregistrer paiement"""
+        # Enregistrer paiement
         self.metrics['payment'][self._normalize_phase(phase)].append(result)
     
     def _normalize_phase(self, phase: str) -> str:
-        """Normaliser nom de phase"""
         if 'before' in phase:
             return 'before'
         elif 'during' in phase:
@@ -43,7 +38,7 @@ class MetricsCollector:
         return 'before'
     
     def get_availability(self, operation: str, phase: str) -> float:
-        """Calculer taux de disponibilité"""
+        # Calculer taux de disponibilité
         results = self.metrics[operation][phase]
         if not results:
             return 0.0
@@ -52,7 +47,7 @@ class MetricsCollector:
         return (success / len(results)) * 100
     
     def get_average_latency(self, operation: str, phase: str) -> float:
-        """Calculer latence moyenne"""
+        # Calculer latence moyenne
         results = self.metrics[operation][phase]
         latencies = [r.get('latency_ms', 0) for r in results if r.get('success')]
         
@@ -62,7 +57,7 @@ class MetricsCollector:
         return sum(latencies) / len(latencies)
     
     def print_summary(self):
-        """Afficher résumé des métriques"""
+        # Afficher résumé des métriques
         print(f"\n{'='*60}")
         print(f" MÉTRIQUES - {self.strategy_name}")
         print(f"{'='*60}\n")
@@ -81,7 +76,7 @@ class MetricsCollector:
             print()
     
     def export_to_dict(self) -> Dict:
-        """Exporter métriques en dictionnaire"""
+        # Exporter métriques en dictionnaire
         return {
             'strategy': self.strategy_name,
             'availability': {

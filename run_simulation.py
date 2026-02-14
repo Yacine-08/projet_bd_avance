@@ -1,6 +1,3 @@
-"""
-Script principal de simulation complète
-"""
 
 import json
 import time
@@ -19,7 +16,7 @@ from analysis.metrics_collector import MetricsCollector
 from analysis.visualizer import Visualizer
 
 def load_initial_data():
-    """Charger données initiales"""
+    # Charger données initiales
     with open('data/users.json', 'r') as f:
         users_data = json.load(f)
     
@@ -29,7 +26,7 @@ def load_initial_data():
     return users_data, transactions_data
 
 def initialize_nodes(users_data, transactions_data):
-    """Initialiser les nœuds avec données"""
+    # Initialiser les nœuds avec données
     # Créer nœuds
     dakar = Node('DAKAR', 'Dakar', NodeRole.MASTER, (14.7167, -17.4677))
     saint_louis = Node('SAINT_LOUIS', 'Saint-Louis', NodeRole.REPLICA_RW, (16.0179, -16.5119))
@@ -277,9 +274,8 @@ def run_partition_comparison():
     print("\n✓ Simulation terminée - Graphiques générés dans /outputs/")
 
 def run_daily_simulation():
-    """
-    Simulation: Évolution CAP sur 24h
-    """
+    # Simulation: Évolution CAP sur 24h
+
     print("\n" + "="*80)
     print(" SIMULATION: ÉVOLUTION CAP SUR 24 HEURES")
     print("="*80 + "\n")
@@ -327,7 +323,7 @@ def run_daily_simulation():
     visualizer = Visualizer()
     visualizer.plot_24h_evolution(hourly_metrics)
     
-    print("\n✓ Simulation 24h terminée - Graphiques dans /outputs/")
+    print("\nSimulation 24h terminée - Graphiques dans /outputs/")
 
 if __name__ == "__main__":
     print("\n" + "="*80)

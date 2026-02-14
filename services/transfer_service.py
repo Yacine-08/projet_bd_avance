@@ -134,7 +134,7 @@ class TransferService:
             
             if response is None:
                 # Communication échouée
-                print(f"[Transfer]   ✗ {node.name} unreachable")
+                print(f"[Transfer]   {node.name} unreachable")
                 votes[node.id] = 'NO'
             else:
                 # Vérifier si nœud peut participer
@@ -149,7 +149,7 @@ class TransferService:
         
         if all_yes:
             transaction.mark_prepared()
-            print(f"[Transfer] ✓ PREPARE successful (all voted YES)")
+            print(f"[Transfer] PREPARE successful (all voted YES)")
             return True
         else:
             no_voters = [nid for nid, vote in votes.items() if vote == 'NO']

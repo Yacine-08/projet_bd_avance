@@ -1,4 +1,3 @@
-# Simulateur de reseau avec latences et pannes
 
 import time
 import random

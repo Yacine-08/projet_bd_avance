@@ -70,8 +70,6 @@ class NetworkConfig:
     }
 
 class LoadProfile:
-    # Profils de charge selon l'heure
-    
     # Transactions par seconde selon l'heure
     HOURLY_LOAD = {
         0: 10,    # Minuit

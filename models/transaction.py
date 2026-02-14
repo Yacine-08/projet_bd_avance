@@ -72,7 +72,7 @@ class Transaction:
         self.status = TransactionStatus.PREPARED
     
     def mark_committed(self):
-        # Marquer comme commité (phase 2 2PC)
+        # Marquer comme commité
         self.status = TransactionStatus.COMMITTED
         try:
             self.completed_at = datetime.fromtimestamp(time.time())

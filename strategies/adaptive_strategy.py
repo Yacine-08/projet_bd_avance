@@ -1,7 +1,3 @@
-"""
-Stratégie Adaptative (Réaliste)
-Balance intelligemment entre C et A selon le contexte
-"""
 
 import time
 from typing import Dict

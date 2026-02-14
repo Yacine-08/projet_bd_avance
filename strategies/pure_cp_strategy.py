@@ -1,7 +1,3 @@
-"""
-Stratégie CP Pure (Rigide)
-Cohérence absolue, sacrifie disponibilité
-"""
 
 from typing import Dict
 from models.node import Node
@@ -96,9 +92,8 @@ class PureCPStrategy:
     
     def execute_payment(self, user_id: str, provider: str, amount: float,
                        node: Node, master_node: Node, replica_nodes: list) -> Dict:
-        """
-        Paiement en mode CP strict
-        """
+        # Paiement en mode CP strict
+
         # Vérifier connectivité master
         if not node.can_reach_master(master_node):
             return {

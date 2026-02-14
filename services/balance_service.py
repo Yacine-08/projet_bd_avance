@@ -50,7 +50,7 @@ class BalanceService:
             self.cache_hits += 1
             latency = (time.time() - start_time) * 1000
             
-            print(f"[Balance]   ✓ Cache HIT: {balance} FCFA ({latency:.0f}ms)")
+            print(f"[Balance]   Cache HIT: {balance} FCFA ({latency:.0f}ms)")
             
             return {
                 'success': True,
@@ -61,7 +61,7 @@ class BalanceService:
             }
         
         self.cache_misses += 1
-        print(f"[Balance]   ✗ Cache MISS")
+        print(f"[Balance]   Cache MISS")
         
         # Lire depuis replica local
         print(f"[Balance]  Reading from local replica {node.name}...")

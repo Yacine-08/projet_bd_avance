@@ -1,14 +1,10 @@
-"""
-Simulateur de partition réseau
-"""
-
 import time
 from typing import List, Dict
 from models.node import Node, NodeState
 from simulation.network_simulator import NetworkSimulator
 
 class PartitionSimulator:
-    """Simule des partitions réseau entre nœuds"""
+    # Simule des partitions réseau entre nœuds
     
     def __init__(self, network: NetworkSimulator, nodes: List[Node]):
         self.network = network
@@ -19,9 +15,7 @@ class PartitionSimulator:
         print("[PartitionSim] Initialized")
     
     def create_partition(self, node1_id: str, node2_id: str):
-        """
-        Créer une partition entre deux nœuds
-        """
+
         print(f"\n{'='*60}")
         print(f"[PartitionSim] Creating partition between {node1_id} and {node2_id}")
         print(f"{'='*60}")
@@ -42,13 +36,11 @@ class PartitionSimulator:
         self.partition_active = True
         self.partition_start_time = time.time()
         
-        print(f"[PartitionSim] ⚠️ {node1_id} and {node2_id} are now ISOLATED")
+        print(f"[PartitionSim] {node1_id} and {node2_id} are now ISOLATED")
         print(f"{'='*60}\n")
     
     def heal_partition(self, node1_id: str, node2_id: str):
-        """
-        Résoudre une partition
-        """
+
         print(f"\n{'='*60}")
         print(f"[PartitionSim] Healing partition between {node1_id} and {node2_id}")
         print(f"{'='*60}")
@@ -70,17 +62,17 @@ class PartitionSimulator:
         
         duration = time.time() - self.partition_start_time if self.partition_start_time else 0
         
-        print(f"[PartitionSim] ✓ Partition healed after {duration:.1f} seconds")
+        print(f"[PartitionSim] Partition healed after {duration:.1f} seconds")
         print(f"[PartitionSim] Starting synchronization...")
         
         # Simuler sync
         self._synchronize_nodes(node1, node2)
         
-        print(f"[PartitionSim] ✓ Nodes synchronized")
+        print(f"[PartitionSim] Nodes synchronized")
         print(f"{'='*60}\n")
     
     def _synchronize_nodes(self, node1: Node, node2: Node):
-        """Synchroniser données entre nœuds après partition"""
+        # Synchroniser données entre nœuds après partition
         # Simuler délai de sync
         time.sleep(0.5)
         

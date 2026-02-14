@@ -75,9 +75,8 @@ class Node:
         return self.state == NodeState.HEALTHY
     
     def get_balance(self, user_id: str, from_cache: bool = False) -> Optional[float]:
+        # Récupère le solde d'un utilisateur
         """
-        Récupère le solde d'un utilisateur
-        
         Args:
             user_id: ID utilisateur
             from_cache: Si True, essayer cache d'abord

@@ -1,6 +1,3 @@
-"""
-Générateur de graphiques
-"""
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,7 +5,7 @@ from typing import List, Dict
 import os
 
 class Visualizer:
-    """Génère les graphiques de visualisation"""
+    # Génère les graphiques de visualisation
     
     def __init__(self, output_dir='outputs'):
         self.output_dir = output_dir
@@ -24,11 +21,10 @@ class Visualizer:
                 plt.style.use('default')
     
     def compare_strategies(self, metrics_cp, metrics_ad):
-        """
-        Graphique comparaison stratégies Pure CP vs Adaptive
-        """
+        #Graphique comparaison stratégies Pure CP vs Adaptive
+
         fig, axes = plt.subplots(2, 2, figsize=(15, 10))
-        fig.suptitle('Comparaison Stratégies: Pure CP vs Adaptive\nDurant Partition Réseau',
+        fig.subtitle('Comparaison Stratégies: Pure CP vs Adaptive\nDurant Partition Réseau',
                     fontsize=16, fontweight='bold')
         
         operations = ['transfer', 'balance', 'history', 'payment']
@@ -66,14 +62,12 @@ class Visualizer:
                     ax.text(i + width/2, v + 2, f'{v:.0f}%', ha='center', fontsize=9)
         
         plt.tight_layout()
-        plt.savefig(f'{self.output_dir}/comparison_strategies.png', dpi=300, bbox_inches='tight')
-        print(f"✓ Graphique sauvegardé: {self.output_dir}/comparison_strategies.png")
+        plt.savefig(f'{self.output_dir}/comparaison_strategies.png', dpi=300, bbox_inches='tight')
+        print(f"Graphique sauvegardé: {self.output_dir}/comparaison_strategies.png")
         plt.close()
     
     def plot_availability_comparison(self, metrics_cp, metrics_ad):
-        """
-        Graphique global de disponibilité
-        """
+        # Graphique global de disponibilité
         fig, ax = plt.subplots(figsize=(12, 6))
         
         # Calculer disponibilité moyenne durant partition
@@ -120,15 +114,13 @@ class Visualizer:
         
         plt.tight_layout()
         plt.savefig(f'{self.output_dir}/availability_comparison.png', dpi=300, bbox_inches='tight')
-        print(f"✓ Graphique sauvegardé: {self.output_dir}/availability_comparison.png")
+        print(f"Graphique sauvegardé: {self.output_dir}/availability_comparison.png")
         plt.close()
     
     def plot_24h_evolution(self, hourly_metrics: List[Dict]):
-        """
-        Graphique évolution CAP sur 24h
-        """
+        # Graphique évolution CAP sur 24h
         fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(14, 10))
-        fig.suptitle('Évolution CAP sur 24 Heures - Wave Mobile Money',
+        fig.suptitle('Évolution CAP sur 24 Heures',
                     fontsize=16, fontweight='bold')
         
         hours = [m['hour'] for m in hourly_metrics]
@@ -185,13 +177,12 @@ class Visualizer:
         
         plt.tight_layout()
         plt.savefig(f'{self.output_dir}/24h_evolution.png', dpi=300, bbox_inches='tight')
-        print(f"✓ Graphique sauvegardé: {self.output_dir}/24h_evolution.png")
+        print(f"Graphique sauvegardé: {self.output_dir}/24h_evolution.png")
         plt.close()
     
     def plot_latency_comparison(self, metrics_cp, metrics_ad):
-        """
-        Graphique comparaison latences
-        """
+        #Graphique comparaison latences
+
         fig, ax = plt.subplots(figsize=(12, 6))
         
         operations = ['transfer', 'balance', 'history', 'payment']
@@ -225,5 +216,5 @@ class Visualizer:
         
         plt.tight_layout()
         plt.savefig(f'{self.output_dir}/latency_comparison.png', dpi=300, bbox_inches='tight')
-        print(f"✓ Graphique sauvegardé: {self.output_dir}/latency_comparison.png")
+        print(f"Graphique sauvegardé: {self.output_dir}/latency_comparison.png")
         plt.close()
