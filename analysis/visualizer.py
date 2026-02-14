@@ -24,7 +24,7 @@ class Visualizer:
         #Graphique comparaison stratégies Pure CP vs Adaptive
 
         fig, axes = plt.subplots(2, 2, figsize=(15, 10))
-        fig.subtitle('Comparaison Stratégies: Pure CP vs Adaptive\nDurant Partition Réseau',
+        fig.suptitle('Comparaison Stratégies: Pure CP vs Adaptive\nDurant Partition Réseau',
                     fontsize=16, fontweight='bold')
         
         operations = ['transfer', 'balance', 'history', 'payment']
@@ -62,8 +62,8 @@ class Visualizer:
                     ax.text(i + width/2, v + 2, f'{v:.0f}%', ha='center', fontsize=9)
         
         plt.tight_layout()
-        plt.savefig(f'{self.output_dir}/comparaison_strategies.png', dpi=300, bbox_inches='tight')
-        print(f"Graphique sauvegardé: {self.output_dir}/comparaison_strategies.png")
+        plt.savefig(f'{self.output_dir}/comparison_strategies.png', dpi=300, bbox_inches='tight')
+        print(f"Graphique sauvegardé: {self.output_dir}/comparison_strategies.png")
         plt.close()
     
     def plot_availability_comparison(self, metrics_cp, metrics_ad):
